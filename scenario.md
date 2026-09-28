@@ -44,7 +44,7 @@ These facts came out in interviews with IT, AR, and Finance. None of them appear
 - **Remote phone payments.** AR specialists take card numbers over the phone from home and type them into the portal's staff payment screen on company laptops, connected through the VPN.
 - **Call recordings.** The cloud phone system records all AR calls "for quality purposes." Card numbers and security codes are spoken aloud and captured in the recordings.
 - **Card details by email.** Some customers email card numbers, and sometimes security codes, to the AR shared inbox. AR staff copy them into the portal and "usually" delete the emails.
-- **InvoiceTrack connection.** The payment application calls InvoiceTrack, on the corporate network, to look up open invoices and mark them paid.
+- **InvoiceTrack connection.** The payment application calls InvoiceTrack, on the corporate network, to look up open invoices and mark them paid. It sends payment details over an unencrypted connection, and external partners can reach InvoiceTrack's folders (see RA-2026-004 in the risk acceptance project).
 - **Shared services.** CDE servers use corporate Active Directory accounts for logins, get patches from the management zone, and are backed up to the shared backup server.
 - **Logging.** CDE logs flow to the SIEM in the management zone. Nobody has checked whether the logs contain card numbers.
 
